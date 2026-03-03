@@ -207,7 +207,7 @@ export function Sidebar({ onClose }: SidebarProps) {
                             {user?.email || "admin@edu.com"}
                         </p>
                         <p className="text-sm font-bold text-foreground truncate">
-                            {user?.name || (user?.email ? user.email.split('@')[0].charAt(0).toUpperCase() + user.email.split('@')[0].slice(1) : "Security Lead")}
+                            {user?.name || (user?.email ? user.email.split('@')[0].charAt(0).toUpperCase() + user.email.split('@')[0].slice(1) : "System Administration")}
                         </p>
                     </div>
                     <HiChevronRight className={cn(
