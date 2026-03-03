@@ -64,9 +64,16 @@ export function Sidebar({ onClose }: SidebarProps) {
     const { theme, setTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
     const [showLogout, setShowLogout] = useState(false);
+    const [user, setUser] = useState<{ name: string; email: string } | null>(null);
     const router = useRouter();
 
-    useEffect(() => setMounted(true), []);
+    useEffect(() => {
+        setMounted(true);
+        const userData = localStorage.getItem("user");
+        if (userData) {
+            setUser(JSON.parse(userData));
+        }
+    }, []);
 
     const handleLogout = () => {
         localStorage.removeItem("user");
@@ -196,8 +203,12 @@ export function Sidebar({ onClose }: SidebarProps) {
                         </div>
                     </div>
                     <div className="flex-1 min-w-0 text-left">
-                        <p className="text-[11px] font-medium text-muted-foreground truncate tracking-wide uppercase">admin@edu.com</p>
-                        <p className="text-sm font-bold text-foreground truncate">Security Lead</p>
+                        <p className="text-[11px] font-medium text-muted-foreground truncate tracking-wide uppercase">
+                            {user?.email || "admin@edu.com"}
+                        </p>
+                        <p className="text-sm font-bold text-foreground truncate">
+                            {user?.name || "Security Lead"}
+                        </p>
                     </div>
                     <HiChevronRight className={cn(
                         "h-4 w-4 text-muted-foreground transition-all duration-300",
