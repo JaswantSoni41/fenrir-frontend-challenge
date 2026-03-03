@@ -49,9 +49,13 @@ export default function LoginPage() {
     });
 
     const onSubmit = (values: FormValues) => {
+        // Extract name from email (part before @)
+        const emailName = values.email.split('@')[0];
+        const formattedName = emailName.charAt(0).toUpperCase() + emailName.slice(1);
+
         // Dummy login logic: save to localStorage and redirect
         localStorage.setItem("user", JSON.stringify({
-            name: "Demo User", // Placeholder for login
+            name: formattedName,
             email: values.email,
             isLoggedIn: true
         }));
