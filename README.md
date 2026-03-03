@@ -12,10 +12,10 @@ The application recreates three key screens from the security platform, maintain
 2. **Main Dashboard**: High-level security stats and a comprehensive, searchable list of security scans.
 3. **Active Scan Detail**: A live-action console showing real-time spidering and vulnerability findings.
 
-## **Video Walkthrough**
+## **Deployment & Walkthrough**
 
-You can watch a detailed walkthrough of the application, covering the design choices, responsive behavior, and technical implementation here:
-[**Watch on Loom**](https://www.loom.com/share/c02f295bd3ac439a9af665ba3323ab1c)
+- **Live Demo**: [https://fenrir-frontend-challenge.netlify.app/](https://fenrir-frontend-challenge.netlify.app/)
+- **Video Walkthrough**: [Watch on Loom](https://www.loom.com/share/c02f295bd3ac439a9af665ba3323ab1c)
 
 ## Tech Stack
 
