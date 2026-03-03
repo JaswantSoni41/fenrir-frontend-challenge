@@ -97,15 +97,17 @@ export function ScanProgressHeader() {
                 {/* Right Side: Workflow & Details */}
                 <div className="flex-1 w-full flex flex-col gap-6">
                     {/* Top: Workflow Stepper */}
-                    <div className="relative flex items-center justify-between w-full mx-auto px-4">
+                    <div className="relative flex items-center justify-between w-full mx-auto px-2 sm:px-4 overflow-x-auto no-scrollbar pb-1">
                         {/* Connecting Line */}
-                        <div className="absolute top-5 left-12 right-12 h-0.5 bg-border/20 z-0" />
+                        <div className="absolute top-5 left-10 sm:left-12 right-10 sm:right-12 h-0.5 bg-border/20 z-0 min-w-[450px] sm:min-w-0" />
 
-                        <Step icon={TbWorldSearch} label="Spidering" isActive />
-                        <Step icon={TbHierarchy} label="Mapping" />
-                        <Step icon={TbFlask} label="Testing" />
-                        <Step icon={TbClipboardCheck} label="Validating" />
-                        <Step icon={TbFileDescription} label="Reporting" />
+                        <div className="flex items-center justify-between w-full min-w-[400px] sm:min-w-0 relative z-10">
+                            <Step icon={TbWorldSearch} label="Spidering" isActive />
+                            <Step icon={TbHierarchy} label="Mapping" />
+                            <Step icon={TbFlask} label="Testing" />
+                            <Step icon={TbClipboardCheck} label="Validating" />
+                            <Step icon={TbFileDescription} label="Reporting" />
+                        </div>
                     </div>
 
                     {/* Bottom: Scan Info Grid */}

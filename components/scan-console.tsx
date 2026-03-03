@@ -99,20 +99,24 @@ export function ScanConsole() {
         <motion.div
             initial={{ opacity: 0, scale: 0.98 }}
             animate={{ opacity: 1, scale: 1 }}
-            className="w-full flex-none md:flex-1 flex flex-col px-6 min-h-0"
+            className="w-full flex-none md:flex-1 flex flex-col px-4 sm:px-6 min-h-0"
         >
             <div className="w-full flex-1 flex flex-col bg-card rounded-2xl border border-border overflow-hidden shadow-sm transition-all">
                 {/* Console Header */}
-                <div className="px-6 h-14 border-b border-border/50 flex items-center justify-between bg-card/50">
-                    <div className="flex items-center gap-3">
-                        <div className="h-2 w-2 rounded-full bg-[#0CC8A8] animate-pulse" />
-                        <span className="text-sm font-bold tracking-tight">Live Scan Console</span>
-                        <div className="ml-4 px-3 py-1 rounded-full bg-muted/50 border border-border/30 flex items-center gap-2">
-                            <span className="h-3 w-3 rounded-full border-2 border-primary border-t-transparent animate-spin" />
-                            <span className="text-[10px] font-bold text-muted-foreground uppercase tracking-widest">Running...</span>
+                <div className="px-4 sm:px-6 min-h-14 py-3 sm:py-0 border-b border-border/50 flex items-center justify-between bg-card/50 gap-4">
+                    <div className="flex flex-wrap items-center gap-2 sm:gap-3">
+                        <div className="flex items-center gap-2 sm:gap-3">
+                            <div className="h-2 w-2 rounded-full bg-[#0CC8A8] animate-pulse shrink-0" />
+                            <span className="text-[13px] sm:text-sm font-bold tracking-tight whitespace-nowrap">
+                                <span className="hidden sm:inline">Live Scan </span>Console
+                            </span>
+                        </div>
+                        <div className="px-2 sm:px-3 py-1 rounded-full bg-muted/50 border border-border/30 flex items-center gap-2">
+                            <span className="h-3 w-3 rounded-full border-2 border-primary border-t-transparent animate-spin shrink-0" />
+                            <span className="text-[9px] sm:text-[10px] font-bold text-muted-foreground uppercase tracking-widest whitespace-nowrap">Running...</span>
                         </div>
                     </div>
-                    <div className="flex items-center gap-4 text-muted-foreground">
+                    <div className="flex items-center gap-3 sm:gap-4 text-muted-foreground shrink-0">
                         <HiChevronDown className="h-5 w-5 cursor-pointer hover:text-foreground transition-colors" />
                         <HiOutlineXMark
                             className="h-5 w-5 cursor-pointer hover:text-foreground transition-colors"

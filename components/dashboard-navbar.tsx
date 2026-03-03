@@ -3,6 +3,7 @@
 import { HiMiniHome } from "react-icons/hi2";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
+import { Download, Square } from "lucide-react";
 
 interface DashboardNavbarProps {
     onMenuClick?: () => void;
@@ -35,20 +36,22 @@ export function DashboardNavbar({ onMenuClick }: DashboardNavbarProps) {
                 </nav>
             </div>
 
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-2 sm:gap-3">
                 <Button
                     variant="outline"
-                    className="rounded-xl border-border text-foreground font-bold h-10 px-5 text-sm hover:bg-accent transition-colors bg-transparent cursor-pointer"
+                    className="rounded-xl border-border text-foreground font-bold h-10 px-3 sm:px-5 text-sm hover:bg-accent transition-colors bg-transparent cursor-pointer flex items-center gap-2"
                     onClick={() => toast.success("Scanning report exported and ready for download.")}
                 >
-                    Export Report
+                    <Download className="h-4 w-4" />
+                    <span className="hidden sm:inline">Export Report</span>
                 </Button>
                 <Button
                     variant="destructive"
-                    className="rounded-xl font-bold h-10 px-5 text-sm shadow-none transition-colors border-none bg-destructive/10 text-destructive dark:text-red-500 hover:bg-destructive/20 cursor-pointer"
+                    className="rounded-xl font-bold h-10 px-3 sm:px-5 text-sm shadow-none transition-colors border-none bg-destructive/10 text-destructive dark:text-red-500 hover:bg-destructive/20 cursor-pointer flex items-center gap-2"
                     onClick={() => toast.error("Security scan terminated manually.")}
                 >
-                    Stop Scan
+                    <Square className="h-4 w-4 fill-current" />
+                    <span className="hidden sm:inline">Stop Scan</span>
                 </Button>
             </div>
         </header>

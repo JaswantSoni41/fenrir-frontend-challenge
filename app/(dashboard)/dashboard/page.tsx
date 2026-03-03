@@ -28,7 +28,7 @@ export default function DashboardPage() {
     );
 
     return (
-        <div className="flex-1 sm:overflow-hidden bg-background flex flex-col gap-4 w-full p-0 sm:p-4 min-h-0">
+        <div className="flex-1 sm:overflow-hidden bg-background flex flex-col gap-4 w-full p-1.5 sm:p-4 min-h-0">
             {/* Stats section */}
             <DashboardStatsRow />
 

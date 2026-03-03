@@ -37,22 +37,22 @@ export default function ScansPage() {
             <ScanConsole />
 
             {/* Console Footer */}
-            <div className="px-6 h-12 border-t border-border/50 flex items-center justify-between bg-card text-[11px] font-bold">
-                <div className="flex items-center gap-8">
+            <div className="px-6 sticky -bottom-6 shrink-0 min-h-0 py-2 border-t border-border/50 flex sm:flex-row flex-col items-center justify-between bg-card text-[11px] font-bold overflow-hidden gap-3 sm:gap-0">
+                <div className="flex flex-wrap items-center justify-center sm:justify-start gap-4 sm:gap-8">
                     <div className="flex items-center gap-2 group cursor-help">
-                        <div className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30 group-hover:bg-primary transition-colors" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30 group-hover:bg-primary transition-colors shrink-0" />
                         <span className="text-muted-foreground group-hover:text-foreground">Sub-Agents: <span className="text-foreground">0</span></span>
                     </div>
                     <div className="flex items-center gap-2 group cursor-help">
-                        <div className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30 group-hover:bg-primary transition-colors" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30 group-hover:bg-primary transition-colors shrink-0" />
                         <span className="text-muted-foreground group-hover:text-foreground">Parallel Executions: <span className="text-foreground">2</span></span>
                     </div>
                     <div className="flex items-center gap-2 group cursor-help">
-                        <div className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30 group-hover:bg-primary transition-colors" />
+                        <div className="h-1.5 w-1.5 rounded-full bg-muted-foreground/30 group-hover:bg-primary transition-colors shrink-0" />
                         <span className="text-muted-foreground group-hover:text-foreground">Operations: <span className="text-foreground">1</span></span>
                     </div>
                 </div>
-                <div className="flex items-center gap-6">
+                <div className="flex flex-wrap items-center justify-center sm:justify-end gap-x-4 gap-y-2 sm:gap-6">
                     <span className="text-red-500">Critical: 0</span>
                     <span className="text-orange-500">High: 0</span>
                     <span className="text-amber-500">Medium: 0</span>
